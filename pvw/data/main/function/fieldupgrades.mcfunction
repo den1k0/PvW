@@ -1,0 +1,14 @@
+scoreboard players add @a[gamemode=!spectator,tag=!hasfieldupgrade,tag=ingame] fieldupgrade 1
+scoreboard players add @a[gamemode=!spectator,tag=!hasfieldupgrade,tag=ingame,scores={classslot11=5},tag=!got1perks] fieldupgrade 1
+scoreboard players add @a[gamemode=!spectator,tag=!hasfieldupgrade,tag=ingame,scores={classslot11=1..4},tag=got1perks] fieldupgrade 1
+scoreboard players add @a[gamemode=!spectator,tag=!hasfieldupgrade,tag=ingame,scores={classslot11=5},tag=got1perks] fieldupgrade 1
+#execute as @a[scores={fieldupgrade=1800..},tag=heartbeatsensor] run give @s compass{Enchantments:[{}],display:{Name:'["",{"text":"Heartbeat Sensor","italic":false}]'},LodestoneTracked: 0, LodestoneDimension: "minecraft:overworld", LodestonePos: {X: 0, Y: 0, Z: 0}}
+#execute as @a[scores={fieldupgrade=1800..},tag=loadoutdropmarker] run give @s villager_spawn_egg{EntityTag:{id:block_display,Glowing:1b,block_state:{Name:"minecraft:barrel"},Tags:["loadoutdrop","loadoutdropinit"]},display:{Name:'[{"text":"Loadout Drop","italic":false,"color":"yellow"}]'},CanPlaceOn:["#minecraft:mineable/hoe","#minecraft:mineable/axe","#minecraft:mineable/pickaxe","#minecraft:mineable/shovel","#minecraft:ice"],Enchantments:[{}]}
+#execute as @a[scores={fieldupgrade=1800..},tag=deployablecake] run give @s chicken_spawn_egg{EntityTag:{id:block_display,block_state:{Name:"minecraft:cake"},Tags:["cakeblock","cakeblockinit","cakeblockpart"]},display:{Name:'[{"text":"Deployable Cake","italic":false,"color":"aqua"}]'},CanPlaceOn:["#minecraft:mineable/hoe","#minecraft:mineable/axe","#minecraft:mineable/pickaxe","#minecraft:mineable/shovel","#minecraft:ice","#minecraft:slabs"],Enchantments:[{}]}
+#execute as @a[scores={fieldupgrade=1800..},tag=trophy] run give @s frog_spawn_egg{EntityTag:{id:frog,variant:temperate,Tags:["frog"],Health:10.0f,NoAI:1b,PersistenceRequired:1b,Silent:0b,Attributes:[{Name:"generic.max_health",Base:10.0f}]},display:{Name:'[{"text":"Frog Sentry","italic":false,"color":"gold"}]'},CanPlaceOn:["#minecraft:mineable/hoe","#minecraft:mineable/axe","#minecraft:mineable/pickaxe","#minecraft:mineable/shovel","#minecraft:ice","#minecraft:slabs"]}
+#execute as @a[scores={fieldupgrade=1800..},tag=tacticalinsertion] run give @s minecraft:blaze_rod{display:{Name:'["",{"text":"Tactical Insertion (Press Q)","italic":false}]'},Enchantments:[{}]}
+execute as @a[scores={fieldupgrade=1800..},tag=ingame] run tag @s add hasfieldupgrade
+execute as @a[scores={fieldupgrade=1800..},tag=ingame] at @s run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1 0
+execute as @a[scores={fieldupgrade=1800..},tag=ingame] run scoreboard players reset @s fieldupgrade
+execute as @a[scores={fieldupgrade=1600},tag=ingame] at @s run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.2 0.7 0
+execute as @a[scores={fieldupgrade=1700},tag=ingame] at @s run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.3 0.85 0

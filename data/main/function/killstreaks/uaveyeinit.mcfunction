@@ -1,0 +1,2 @@
+execute at @s run summon item_display ~ ~ ~ {Tags:["uaveye","uaveyeinit"],item:{id:"minecraft:ender_eye",count:1}}
+execute at @s run scoreboard players operation @n[tag=uaveyeinit] playerid = @s playerid

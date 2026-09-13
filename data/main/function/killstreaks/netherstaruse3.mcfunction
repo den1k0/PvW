@@ -1,0 +1,8 @@
+execute at @s[scores={netherstaruse=1..}] if entity @e[tag=gamemodeffa,distance=..1000] run tag @s add ffanukeuser
+execute at @s[scores={netherstaruse=1..}] if entity @e[tag=gamemodeffa,distance=..1000] run scoreboard players set @s ffanuke 1
+execute at @s[scores={netherstaruse=1..}] if entity @e[tag=gamemodeffa,distance=..1000] run playsound minecraft:music_disc.tdmnukedroped master @a[distance=..1000] ~ ~ ~ 1 1 1
+execute at @s[scores={netherstaruse=1..}] if entity @e[tag=gamemodeffa,distance=..1000] run playsound minecraft:music_disc.tdmmilenemynuke voice @a[team=witherffa,distance=0.1..1000] ~ ~ ~ 0.6 1 0.6
+execute at @s[scores={netherstaruse=1..}] if entity @e[tag=gamemodeffa,distance=..1000] run playsound minecraft:music_disc.tdmmilfriendlynuke voice @a[team=witherffa] ~ ~ ~ 0.6 1 0.6
+execute at @s[scores={netherstaruse=1..}] if entity @e[tag=gamemodeffa,distance=..1000] run playsound minecraft:music_disc.tdmabenemynuke voice @a[team=piglinffa,distance=0.1..1000] ~ ~ ~ 0.6 1 0.6
+execute at @s[scores={netherstaruse=1..}] if entity @e[tag=gamemodeffa,distance=..1000] run tellraw @a[distance=..1000] [{"selector":"@s","bold":true},{"text":" used ","bold":true,"color":"yellow"},{"text":"NUKE!","bold":true,"color":"red"}]
+execute at @s[scores={netherstaruse=1..}] if entity @e[tag=gamemodeffa,distance=..1000] run playsound minecraft:music_disc.tdmabfriendlynuke voice @s[team=piglinffa] ~ ~ ~ 0.6 1 0.6

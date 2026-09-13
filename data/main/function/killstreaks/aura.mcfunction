@@ -1,0 +1,2 @@
+execute if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"sneak":false}}}} at @s run particle minecraft:flame ~ ~0.125 ~ 0.6 0.03 0.6 0 2 normal
+execute if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"sneak":false}}}} at @s at @a[distance=..2] run damage @p 1.5 hot_floor by @s

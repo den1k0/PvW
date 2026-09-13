@@ -1,0 +1,3 @@
+tag @s[tag=mplobbytp] add lockedlobby
+execute at @s[tag=lockedlobby] unless entity @e[tag=textlockedlobby,distance=..2] run summon text_display ~-0.65 ~1.5 ~ {Tags:["textlockedlobby"],billboard:"vertical",text:{"text":"LOCKED","color":"red"},alignment:"center"}
+execute at @s[tag=lockedlobby] positioned ~ ~1.5 ~ run data modify entity @n[tag=textlockedlobby] transformation.scale set value [2.5f,2.5f,2.5f]

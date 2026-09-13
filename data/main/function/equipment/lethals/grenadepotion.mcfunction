@@ -1,0 +1,9 @@
+execute as @s[tag=grenadeexplode] at @s run particle minecraft:explosion ~ ~ ~ 1 1 1 0 8 normal
+execute as @s[tag=grenadeexplode] at @s run playsound minecraft:entity.generic.explode master @a ~ ~ ~ 1 0.7 0
+execute as @s[tag=grenadeexplode] at @s run scoreboard players operation @s playerid = @e[limit=1,sort=nearest,tag=potionid] playerid
+execute as @s[tag=grenadeexplode] at @s positioned ~ ~-1 ~ as @a[distance=..1000] if score @s playerid = @e[sort=nearest,limit=1,tag=grenadeexplode] playerid at @e[distance=..1.5,type=!player] run damage @e[sort=nearest,limit=1] 12 minecraft:player_explosion by @s
+execute as @s[tag=grenadeexplode] at @s positioned ~ ~-1 ~ as @a[distance=..1000] if score @s playerid = @e[sort=nearest,limit=1,tag=grenadeexplode] playerid at @e[distance=..2.5,type=!player] run damage @e[sort=nearest,limit=1] 9 minecraft:player_explosion by @s
+execute as @s[tag=grenadeexplode] at @s positioned ~ ~-1 ~ as @a[distance=..1000] if score @s playerid = @e[sort=nearest,limit=1,tag=grenadeexplode] playerid at @e[distance=..3.5,type=!player] run damage @e[sort=nearest,limit=1] 6 minecraft:player_explosion by @s
+execute as @s[tag=grenadeexplode] at @s positioned ~ ~-1 ~ as @a[distance=..1000] if score @s playerid = @e[sort=nearest,limit=1,tag=grenadeexplode] playerid at @a[distance=..1.5] run damage @p[gamemode=!spectator] 12 minecraft:player_explosion by @s
+execute as @s[tag=grenadeexplode] at @s positioned ~ ~-1 ~ as @a[distance=..1000] if score @s playerid = @e[sort=nearest,limit=1,tag=grenadeexplode] playerid at @a[distance=..2.5] run damage @p[gamemode=!spectator] 9 minecraft:player_explosion by @s
+execute as @s[tag=grenadeexplode] at @s positioned ~ ~-1 ~ as @a[distance=..1000] if score @s playerid = @e[sort=nearest,limit=1,tag=grenadeexplode] playerid at @a[distance=..3.5] run damage @p[gamemode=!spectator] 6 minecraft:player_explosion by @s

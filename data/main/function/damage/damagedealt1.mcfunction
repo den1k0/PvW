@@ -1,0 +1,5 @@
+execute unless score @s killstreak matches 3 unless score @s killstreak matches 5 unless score @s killstreak matches 7 unless score @s killstreak matches 15 run title @s actionbar ["",{"text":"-","color":"red"},{"score":{"name":"@s","objective":"damagedealt"},"color":"red"}]
+execute if score @s killstreak matches 3 unless score @s playerkill matches 1.. run title @s actionbar ["",{"text":"-","color":"red"},{"score":{"name":"@s","objective":"damagedealt"},"color":"red"}]
+execute if score @s killstreak matches 5 unless score @s playerkill matches 1.. run title @s actionbar ["",{"text":"-","color":"red"},{"score":{"name":"@s","objective":"damagedealt"},"color":"red"}]
+execute if score @s killstreak matches 7 unless score @s playerkill matches 1.. run title @s actionbar ["",{"text":"-","color":"red"},{"score":{"name":"@s","objective":"damagedealt"},"color":"red"}]
+execute if score @s killstreak matches 15 unless score @s playerkill matches 1.. run title @s actionbar ["",{"text":"-","color":"red"},{"score":{"name":"@s","objective":"damagedealt"},"color":"red"}]

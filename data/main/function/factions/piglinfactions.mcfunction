@@ -1,0 +1,3 @@
+execute at @s[scores={piglinteamfaction=1}] if score @s move matches 144.. run playsound entity.piglin.step master @a ~ ~ ~ 0.1 1 0
+execute at @s[scores={piglinteamfaction=2}] if score @s move matches 144.. run playsound item.armor.equip_generic master @a ~ ~ ~ 0.2 0.5 0
+execute at @s[scores={piglinteamfaction=3}] if score @s move matches 144.. run playsound entity.zombie.step master @a ~ ~ ~ 0.1 1.3 0

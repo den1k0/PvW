@@ -1,0 +1,2 @@
+$execute at @s run data modify storage minecraft:pvw player.$(id).stash[$(elementid)].components."minecraft:custom_data".souls set from entity @n[tag=souladder] equipment.mainhand.components."minecraft:custom_data".souls
+$execute at @s run data modify storage minecraft:pvw player.$(id).stash[$(elementid)].components."minecraft:lore"[4].extra[0].text set string entity @n[tag=souladder] equipment.mainhand.components."minecraft:custom_data".souls

@@ -1,0 +1,2 @@
+execute unless data entity @s item.components.minecraft:potion_contents.custom_color run function main:factions/boggedarrowshoot
+execute if data entity @s item.components.minecraft:potion_contents.custom_color run tag @s remove bouncearrow

@@ -1,0 +1,3 @@
+execute at @s[scores={witherteamfaction=1}] if score @s move matches 144.. run playsound entity.wither_skeleton.step master @a ~ ~ ~ 0.1 1 0
+execute at @s[scores={witherteamfaction=2}] if score @s move matches 144.. run playsound entity.stray.step master @a ~ ~ ~ 0.1 1 0
+execute at @s[scores={witherteamfaction=3}] if score @s move matches 144.. run playsound entity.bogged.step master @a ~ ~ ~ 0.1 1 0

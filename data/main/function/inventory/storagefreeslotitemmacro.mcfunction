@@ -1,0 +1,2 @@
+$execute store result score @s count run data get storage minecraft:pvw player.$(id).stash
+$execute at @s run data modify storage minecraft:pvw player.$(id).stash[$(freeslot)] set from entity @n[tag=caseitemmodifier] equipment.mainhand

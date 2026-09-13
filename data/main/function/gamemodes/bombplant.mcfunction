@@ -1,0 +1,6 @@
+execute at @s if entity @e[tag=gamemodesnd,distance=..1000] as @a[distance=..2.75,gamemode=!spectator] if items entity @s weapon.mainhand tnt run scoreboard players add @s planting 1
+execute at @s[tag=bombplantdem,tag=!bombplantbombed] if entity @e[tag=gamemodedem,distance=..1000] unless entity @e[tag=bomb,distance=..1000] as @a[distance=..2.75,gamemode=!spectator] if items entity @s weapon.mainhand tnt run scoreboard players add @s planting 1
+execute at @s as @a[distance=..2.75,gamemode=!spectator] unless items entity @s weapon.mainhand tnt run scoreboard players reset @s planting
+execute at @s as @a[distance=2.751..5] run scoreboard players reset @s planting
+execute at @s as @a[distance=..7.5,gamemode=!spectator] unless entity @e[tag=bomb,distance=..16] if items entity @s weapon.mainhand tnt unless score @s planting matches 0.. run title @s actionbar {"text":"BOMB PLANT TOO FAR AWAY","bold":true,"color":"red"}
+execute at @s if entity @e[tag=gamemodedem,distance=..1000] unless entity @e[tag=bombplantdem,tag=!bombplantbombed,distance=..16] as @a[distance=..7.5,gamemode=!spectator] if items entity @s weapon.mainhand tnt unless score @s planting matches 0.. run title @s actionbar {"text":"BOMB PLANT NOT AVAILABLE ON THIS SITE","bold":true,"color":"red"}

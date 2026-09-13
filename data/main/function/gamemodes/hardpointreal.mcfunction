@@ -1,0 +1,7 @@
+execute at @s[tag=hardpointreal] if entity @a[team=wither,gamemode=!spectator,distance=..3.125] unless entity @a[team=piglin,gamemode=!spectator,distance=..3.125] run scoreboard players add @e[tag=gamemodecw,sort=nearest,limit=1,distance=..1000] wtemp 1
+execute at @s[tag=hardpointreal] if entity @a[team=wither,gamemode=!spectator,distance=..3.125] unless entity @a[team=piglin,gamemode=!spectator,distance=..3.125] run scoreboard players add @e[tag=gamemodehq,sort=nearest,limit=1,distance=..1000] wtemp 1
+execute at @s[tag=hardpointreal] if entity @a[team=piglin,gamemode=!spectator,distance=..3.125] unless entity @a[team=wither,gamemode=!spectator,distance=..3.125] run scoreboard players add @e[tag=gamemodehq,sort=nearest,limit=1,distance=..1000] ptemp 1
+execute as @s[tag=hardpointreal] at @s run team leave @e[tag=hqbd,distance=..1000]
+execute as @s[tag=hardpointreal] at @s if entity @a[team=wither,gamemode=!spectator,distance=..3.125] unless entity @a[team=piglin,gamemode=!spectator,distance=..3.125] run team join wither @e[tag=hqbd,distance=..1000]
+execute as @s[tag=hardpointreal] at @s if entity @e[tag=gamemodehq,distance=..1000] if entity @a[team=piglin,gamemode=!spectator,distance=..3.125] unless entity @a[team=wither,gamemode=!spectator,distance=..3.125] run team join piglin @e[tag=hqbd,distance=..1000]
+execute at @s[tag=hardpointreal] if entity @e[tag=gamemodehq,distance=..1000] run particle dust{color:[0.000,1.000,0.000],scale:1} ~ ~0.1 ~ 2 0.1 2 0 8 normal

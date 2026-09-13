@@ -1,0 +1,18 @@
+execute as @s[scores={timer2=10}] at @s run tag @a[distance=..1000] remove juggernaut
+execute as @s[scores={timer2=10}] at @s run tag @a[distance=..1000,sort=random,limit=1] add juggernaut
+execute as @s[scores={timer2=10}] at @s run team join wither @a[tag=juggernaut,distance=..1000]
+execute as @s[scores={timer2=10}] at @s run clear @a[tag=juggernaut,distance=..1000]
+execute as @s[scores={timer2=10}] at @s run item replace entity @a[tag=juggernaut,distance=..1000] armor.chest with minecraft:netherite_chestplate[trim={material:amethyst,pattern:ward},enchantments={unbreaking:3,protection:1},minecraft:unbreakable={}]
+execute as @s[scores={timer2=10}] at @s run item replace entity @a[tag=juggernaut,distance=..1000] armor.legs with minecraft:netherite_leggings[trim={material:amethyst,pattern:ward},enchantments={unbreaking:3,protection:1},minecraft:unbreakable={}]
+execute as @s[scores={timer2=10}] at @s run item replace entity @a[tag=juggernaut,distance=..1000] armor.feet with minecraft:netherite_boots[trim={material:amethyst,pattern:ward},enchantments={unbreaking:3,protection:1},minecraft:unbreakable={}]
+execute as @s[scores={timer2=10}] at @s if score @s playercount matches ..4 run item replace entity @a[tag=juggernaut,distance=..1000] hotbar.0 with minecraft:netherite_sword[enchantments={unbreaking:3,sharpness:1,sweeping_edge:3,knockback:1},unbreakable={},item_name={"text":"HEROBRINE SWORD","italic":false,"color":"gold"}]
+execute as @s[scores={timer2=10}] at @s run item replace entity @a[tag=juggernaut,distance=..1000] hotbar.1 with minecraft:crossbow[enchantments={unbreaking:3,quick_charge:4},unbreakable={},item_name={"text":"Minigun","italic":false,"color":"dark_red"}]
+execute as @s[scores={timer2=10}] at @s run item replace entity @a[tag=juggernaut,distance=..1000] hotbar.2 with minecraft:cooked_porkchop 32
+execute as @s[scores={timer2=10}] at @s run item replace entity @a[tag=juggernaut,distance=..1000] weapon.offhand with minecraft:arrow 64
+execute as @s[scores={timer2=10}] at @s run effect give @a[tag=juggernaut,distance=..1000] minecraft:regeneration 300 0 true
+execute as @s[scores={timer2=10}] at @s if score @s playercount matches 5..8 run item replace entity @a[tag=juggernaut,distance=..1000] hotbar.0 with minecraft:netherite_sword[enchantments={unbreaking:3,sharpness:4,sweeping_edge:3,knockback:1},unbreakable={},item_name={"text":"HEROBRINE SWORD","italic":false,"color":"gold"}]
+execute as @s[scores={timer2=10}] at @s if score @s playercount matches 9..12 run item replace entity @a[tag=juggernaut,distance=..1000] hotbar.0 with minecraft:netherite_sword[enchantments={unbreaking:3,sharpness:7,sweeping_edge:3,knockback:1},unbreakable={},item_name={"text":"HEROBRINE SWORD","italic":false,"color":"gold"}]
+execute as @s[scores={timer2=10}] at @s if score @s playercount matches 13..16 run item replace entity @a[tag=juggernaut,distance=..1000] hotbar.0 with minecraft:netherite_sword[enchantments={unbreaking:3,sharpness:10,sweeping_edge:3,knockback:1},unbreakable={},item_name={"text":"HEROBRINE SWORD","italic":false,"color":"gold"}]
+execute as @s[scores={timer2=10}] at @s if score @s playercount matches 17.. run item replace entity @a[tag=juggernaut,distance=..1000] hotbar.0 with minecraft:netherite_sword[enchantments={unbreaking:3,sharpness:13,sweeping_edge:3,knockback:1},unbreakable={},item_name={"text":"HEROBRINE SWORD","italic":false,"color":"gold"}]
+execute as @s[scores={timer2=10}] at @s run effect give @a[tag=juggernaut,distance=..1000] minecraft:instant_health 10 4 true
+execute as @s[scores={timer2=10}] run tag @s remove choosejug

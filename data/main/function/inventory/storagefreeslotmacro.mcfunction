@@ -1,0 +1,2 @@
+$execute at @s run data modify storage minecraft:pvw player.$(id).stash[$(freeslot)] merge value {Slot:$(count)}
+$execute at @s run data modify storage minecraft:pvw player.$(id).stash[$(freeslot)].components."minecraft:custom_data" merge value {elementid:$(freeslot)}

@@ -1,0 +1,14 @@
+execute unless score @s classslot5 matches 2 unless score @s classslot5 matches 5 unless score @s classslot5 matches 6 at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Small:1b,NoGravity:1b,Tags:["arrowloader"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b,components:{"minecraft:custom_data":{ballista:1b},item_model:'ballista_charged',dyed_color:16777215,tooltip_display:{hidden_components:["dyed_color"]}}}}}
+execute if score @s classslot5 matches 2 at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Small:1b,NoGravity:1b,Tags:["arrowloader"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b,components:{"minecraft:custom_data":{ballista:1b},item_model:'ballista_charged',dyed_color:16777215,tooltip_display:{hidden_components:["dyed_color"]},enchantments:{quick_charge:1},custom_name:{"text":"Ballista Crossbow +QU","italic":false}}}}}
+execute if score @s classslot5 matches 5 at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Small:1b,NoGravity:1b,Tags:["arrowloader"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b,components:{"minecraft:custom_data":{ballista:1b},item_model:'ballista_charged',dyed_color:16777215,tooltip_display:{hidden_components:["dyed_color"]},enchantments:{punch:2},custom_name:{"text":"Ballista Crossbow +PU","italic":false}}}}}
+execute if score @s classslot5 matches 6 at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Small:1b,NoGravity:1b,Tags:["arrowloader"],equipment:{mainhand:{id:"minecraft:crossbow",count:1b,components:{"minecraft:custom_data":{ballista:1b},item_model:'ballista_charged',dyed_color:16777215,tooltip_display:{hidden_components:["dyed_color"]},enchantments:{flame:1},custom_name:{"text":"Ballista Crossbow +FL","italic":false}}}}}
+execute at @s run item replace entity @e[tag=arrowloader,limit=1,sort=nearest] weapon.offhand from entity @s weapon.offhand
+execute at @s run data modify entity @e[tag=arrowloader,limit=1,sort=nearest] equipment.mainhand.components."minecraft:charged_projectiles"[] set from entity @n[tag=arrowloader] equipment.offhand
+execute at @s store result score @s arrowcount run data get entity @e[tag=arrowloader,limit=1,sort=nearest] equipment.offhand.count
+scoreboard players remove @s arrowcount 1
+execute at @s store result entity @e[tag=arrowloader,limit=1,sort=nearest] equipment.offhand.count int 1 run scoreboard players get @s arrowcount
+execute at @s run item replace entity @s weapon.mainhand from entity @e[tag=arrowloader,limit=1,sort=nearest] weapon.mainhand
+execute as @s[scores={arrowcount=1..}] at @s run item replace entity @s weapon.offhand from entity @e[tag=arrowloader,limit=1,sort=nearest] weapon.offhand
+execute as @s[scores={arrowcount=..0}] run item replace entity @s weapon.offhand with air
+kill @e[tag=arrowloader]
+tag @s remove loadoffhandarrow

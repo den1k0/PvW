@@ -1,0 +1,10 @@
+execute as @s[tag=loadgamemodetdm] run function main:gamemodes/loadgamemodetdm
+execute as @s[tag=loadgamemodehq] run function main:gamemodes/loadgamemodehq
+execute as @e[tag=loadgamemodeffa] run function main:gamemodes/loadgamemodeffa
+execute as @s[tag=loadgamemodesnd] run function main:gamemodes/loadgamemodesnd
+execute as @s[tag=loadgamemodecw] run function main:gamemodes/loadgamemodecw
+execute as @s[tag=loadgamemodeinf] run function main:gamemodes/loadgamemodeinf
+execute as @s[tag=loadgamemodejug] run function main:gamemodes/loadgamemodejug
+execute as @s[tag=loadgamemodeph] run function main:gamemodes/loadgamemodeph
+execute as @s[tag=loadgamemodedem] run function main:gamemodes/loadgamemodedem
+execute as @s[tag=loadgamemodegg] run function main:gamemodes/loadgamemodegg

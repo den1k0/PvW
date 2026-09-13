@@ -1,0 +1,9 @@
+execute unless score @s voiceovertimer matches 1.. unless items entity @s inventory.* #arrows unless items entity @s hotbar.* #arrows unless items entity @s weapon.* #arrows unless items entity @s inventory.* firework_rocket unless items entity @s hotbar.* firework_rocket unless items entity @s weapon.* firework_rocket run function main:voiceover/outofarrows
+
+execute unless score @s voiceovertimer matches 1.. at @s positioned ~ ~1.65 ~ if data entity @n[type=arrow] {item:{components:{"minecraft:potion_contents":{custom_color:7083032}}}} run function main:voiceover/molotovuse
+execute unless score @s voiceovertimer matches 1.. at @s positioned ~ ~1.65 ~ if data entity @n[type=arrow] {item:{components:{"minecraft:potion_contents":{custom_color:3684408}}}} run function main:voiceover/drilluse
+execute unless score @s voiceovertimer matches 1.. at @s positioned ~ ~1.65 ~ if data entity @n[type=arrow] {item:{components:{"minecraft:potion_contents":{custom_color:4281871}}}} run function main:voiceover/semtexuse
+
+execute unless score @s voiceovertimer matches 1.. at @s positioned ~ ~1.65 ~ if data entity @n[type=arrow] {item:{components:{"minecraft:potion_contents":{custom_color:15988471}}}} run function main:voiceover/flashuse
+execute unless score @s voiceovertimer matches 1.. at @s positioned ~ ~1.65 ~ if data entity @n[type=arrow] {item:{components:{"minecraft:potion_contents":{custom_color:1646884}}}} run function main:voiceover/smokeuse
+execute unless score @s voiceovertimer matches 1.. at @s positioned ~ ~1.65 ~ if data entity @n[type=arrow] {item:{components:{"minecraft:potion_contents":{custom_color:14929226}}}} run function main:voiceover/radaruse

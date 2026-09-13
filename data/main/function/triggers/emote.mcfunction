@@ -1,0 +1,14 @@
+tag @s add emote
+scoreboard players add @s emotetimer 1
+execute if score @s emotetimer matches 1 if score @s emote matches 1 at @s run playsound minecraft:music_disc.trollfacehaha voice @a ~ ~ ~ 1 1 0
+execute if score @s emotetimer matches 1 if score @s emote matches 1 at @s run item replace entity @s armor.head with player_head[profile={id:[I;-2102121264,-738373683,-1293993199,1141833595],properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTYyNmMwMTljOGI0MWM3YjI0OWFlOWJiNjc2MGM0ZTY5ODAwNTFjZjBkNjg5NWNiM2U2ODQ2ZDgxMjQ1YWQxMSJ9fX0="}]},custom_data={dontclear:1b}]
+execute if score @s emotetimer matches 1 if score @s emote matches 2 at @s run playsound minecraft:music_disc.dodyoushoudkillyourselfnow voice @a ~ ~ ~ 1 1 0
+execute if score @s emotetimer matches 1 if score @s emote matches 2 at @s run item replace entity @s armor.head with player_head[profile={id:[I;-937161386,1489913952,-1475401621,-922385907],properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2YzMTczZDhlYWEyZWZhYmY3ZGNiMTIyZjI4MTgwYTYwNmVlMTRiN2IxZmNjNGNlMTc2NmNmODI5N2U2MmRmMCJ9fX0="}]},custom_data={dontclear:1b}]
+execute if score @s emotetimer matches 1 if score @s emote matches 3 at @s run playsound minecraft:music_disc.fnaftwodanger voice @a ~ ~ ~ 1 1 0
+execute if score @s emotetimer matches 1 if score @s emote matches 3 at @s run item replace entity @s armor.head with player_head[profile={id:[I;-793684908,922371044,-1572341630,-1147149688],properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOThiN2NhM2M3ZDMxNGE2MWFiZWQ4ZmMxOGQ3OTdmYzMwYjZlZmM4NDQ1NDI1YzRlMjUwOTk3ZTUyZTZjYiJ9fX0="}]},custom_data={dontclear:1b}]
+execute if score @s emotetimer matches 1 if score @s emote matches 4 at @s run playsound minecraft:entity.cat.beg_for_food voice @a ~ ~ ~ 2 1 0
+execute if score @s emotetimer matches 1 if score @s emote matches 4 at @s run item replace entity @s armor.head with player_head[profile={id:[I;-1870153397,1573144129,-1638220143,-1563633377],properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTcxOWU1MmIxNjNmOTRiNWVhOGIzZWE3ODFlMWQ1ZjJmNTFlNzkzODk5YTc1NDhmOGZiNzI1NTU1MTdlYTFhOSJ9fX0="}]},custom_data={dontclear:1b}]
+execute if score @s emotetimer matches 70.. run scoreboard players reset @s emote
+execute if score @s emotetimer matches 70.. run clear @s player_head
+execute if score @s emotetimer matches 70.. run tag @s remove emote
+execute if score @s emotetimer matches 70.. run scoreboard players reset @s emotetimer
